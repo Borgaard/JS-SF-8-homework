@@ -18,8 +18,9 @@ Follow these directions closely to switch over to this repository.
 Example of how your local homework directory should be structured:
 
 
-    |-- code/   
-        |-- jsd8-homework/
+    |-- code/
+        |-- jsd8-course-materials/ (cloned from Github)
+        |-- jsd8-homework/ (cloned from Github)
             |-- firstName-githubUsername/
                 |-- hw_1/
                     |- bottlesOfBeer.js
