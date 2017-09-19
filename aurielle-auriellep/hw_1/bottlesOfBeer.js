@@ -12,10 +12,18 @@
 
 
 printLyric = function(numBottles) {
+    // starting num of bottles with ternary to handle plural cases.
     let numBottlesOnTheWall = (numBottles - 1) === 1 ? (numBottles - 1) + ' bottle ' : (numBottles - 1) + ' bottles ';
+
+    // Second line of lyric for num of bottles left with ternary to handle plural cases.
     let bottlesLeft = (numBottles - 2) === 1 ? (numBottles - 2) + ' bottle ' : (numBottles - 2) + ' bottles ';
+
+    // Last case to go to the store for more beer.
     let goToTheStore = '\n\nNo more bottles of beer on the wall, no more bottles of beer\nGo to the store and buy some more, 99 bottles of beer on the wall.';
+
+    // Checks if there is beer left or not.
     let noneLeft = (bottlesLeft === '0 bottles ') ? `Take one down and pass it around, No more bottles of beer on the wall.${goToTheStore}` : `Take one down and pass it around, ${bottlesLeft} of beer on the wall.`;
+
     const lyrics = `\n${numBottlesOnTheWall} of beer on the wall, ${numBottlesOnTheWall} of beer.\n${noneLeft}`;
     return lyrics;
 }
