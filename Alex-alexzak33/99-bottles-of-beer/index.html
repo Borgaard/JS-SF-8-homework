@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <script src="app.js"></script>
+    <script>
+   var beerLeft = 99;
+for (beerLeft = 99; beerLeft >= 1; beerLeft = beerLeft - 1) {
+    if (beerLeft === 1) {
+        bottles = 'bottle';
+    } else if (beerLeft>1)
+        bottles = 'bottles';
+    }
+    console.log(beerLeft+" "+bottles+" of beer on the wall.");
+    if (beerLeft < 99) {
+        console.log("");
+        console.log(beerLeft+" "+bottles+" of beer on the wall.");
+    }
+    console.log(beerLeft+" "+bottles+" of beer.");
+    console.log("Take one down and pass it around");
+    if (beerLeft === 1) {
+        console.log("No bottles of beer on the wall.");
+    }
+    </script>
+  </body>
+</html>
