@@ -20,11 +20,11 @@ BONUS 3: Clear the contents of the text box after you've displayed your results,
 
 "use strict";
 
-function FtC(f) {
+function fahrenheit_to_celsius(f) {
    return ((f - 32.0) / 1.8).toFixed(2).toString() + "&deg;C";
 }
 
-function CtF(c) {
+function celsius_to_fahrenheit(c) {
    return ((1.8 * c) + 32).toFixed(2).toString() + "&deg;F";
 }
 
@@ -37,14 +37,13 @@ function clearInput() {
 }
 
 (function() {
-   document.querySelector("#fahrenheit_to_celsius").addEventListener("click", function() {
-      let input = document.querySelector("#temperature").value;
-      showTemp(FtC(input));
-      clearInput();
-   });
-   document.querySelector("#celsius_to_fahrenheit").addEventListener("click", function() {
-      let input = document.querySelector("#temperature").value;
-      showTemp(CtF(input));
-      clearInput();
-   });
+   document
+      .querySelectorAll("[type=button]")
+      .forEach(function(el) {
+         el.addEventListener("click", function(event) {
+            let input = document.querySelector("#temperature").value;
+            showTemp(window[event.target.id](input));
+            clearInput();
+         });
+      });
 })();
