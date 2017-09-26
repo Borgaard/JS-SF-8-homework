@@ -1,0 +1,284 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  /*since you're centralizing your content, 
+  the padding on body is kinda useless*/
+  /*padding: 20px;*/
+
+  text-align: center;
+  transition: background 0.5s linear;
+  font-size: 18px;
+  background: #A3CDFF;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  
+  /*no need to restrict the body size, 
+  let it grow to adjust its content to browser size*/
+  /*width: 400px;*/
+  height: 100%;
+  
+  /*if you have a defined width in pixels, the max-width will never be used*/
+  /*max-width: 100%;*/
+  
+  /* additions */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.converter-container {
+  width: 420px;
+  
+  /*if you're using position absolute
+  with top and left, then the margin is
+  useless*/
+  /*margin: 0 auto;*/
+  
+  /*relative will make it relative to the parent (body in this case)*/
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  
+  /*padding-top: 50vh; /*vh is a unit that represents the 1/100 of viewport height*/
+}
+
+/*
+when declaring styles for your inputs and buttons,
+try to avoid doing that on the tags. if you need to
+expand your project later and add more forms,
+they may need to overwrite a lot of css to look
+different.
+A better alternative is to use class.
+I know that this project is quite small, and maybe
+you already know this, but never hurts to point it out =]
+*/
+input {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 3px solid #dfdfdf;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+input:focus {
+  border-color: #afafaf;
+  outline: none;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: #f26629;
+  cursor: pointer;
+}
+
+/* Error styles
+   ================================================================ */
+
+/* This class shoud be added to the input if the user has not entered a value */
+.error {
+  border-color: red;
+}
+
+/* Snow */
+
+canvas {
+  display: none;
+}
+
+/*Sun*/
+
+.sun {
+  opacity: .5;
+  width: 300px;
+  height: 300px;
+  /*this is repeated bellow, in this situation the last rule will overwrite this one*/
+  z-index: 0;
+  background: #ff0;
+  background: -moz-radial-gradient(center, ellipse cover, #f90 0%, #fc0 50%, #ff0 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f90), color-stop(50%,#fc0), color-stop(100%,#ff0));
+  background: -webkit-radial-gradient(center, ellipse cover, #f90 0%,#fc0 50%,#ff0 100%);
+  background: -o-radial-gradient(center, ellipse cover, #f90 0%,#fc0 50%,#ff0 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #f90 0%,#fc0 50%,#ff0 100%);
+  background: radial-gradient(ellipse at center, #f90 0%,#fc0 50%,#ff0 100%);
+  border-radius: 100%;
+  left: -150px;
+  top: -150px;
+  z-index: -100;
+
+  /*in this situation, it's better to have it absolute, 
+  to make sure that other elements will not interfere with its
+  placement, as it can happen with relative positioning*/
+  position: absolute;
+  box-shadow: 0 0 100px #ff0, 0 0 100px #ff0;
+}
+
+/*Clouds*/
+.clouds {
+  /*fixing your clouds container, will prevent the x-axis to be so long*/
+
+  /*making it position absolute, and using top and left 
+  will place it on the upper corner of the screen, this way
+  every element inside of it, will be relative to it.*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*because of the position absolute, it will be placed on top
+  of the others elements in your page, so setting it to z-index:-1  
+  will make it be lower than all elements (except body)
+  (this is a trick, though)*/
+  z-index: -1;
+
+  width: 100%;
+  height: 500px;
+
+  /*this is the trick that will prevent your x-axis from stretching by the size of your marqueesß*/
+  overflow-x: hidden;
+}
+
+.cloud {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  /*this z-index can still be 100 because it's inside a parent that is -1 AND is absolute*/
+  z-index: 100;
+  transition: opacity 0.5s linear;
+}
+
+
+
+.cloud1 {
+  transform: scale(1.4);
+  top: 4%;
+}
+.cloud2 {
+  transform: scale(1.8);
+  top: 7%;
+}
+.cloud3 {
+  transform: scale(1.35);
+  top: 15%;
+  opacity: 0;
+}
+.cloud4 {
+  transform: scale(1.2);
+  top: 10%;
+}
+
+/*fixing the canvas-wrap in the same way the clouds was fixed*/
+.canvas-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cactus {
+  position: absolute;
+  z-index: -1;
+  right: 50px;
+  bottom: -50px;
+  display: none;
+}
+
+.beach-chair {
+  position: absolute;
+  left: 50px;
+  bottom: 20px;
+  display: none;
+}
+
+.beach {
+  display: none;
+  background: #FEE7C7;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  bottom: 0px;
+  height: 120px;
+  border: 3px solid #FFD69C;
+}
+
+.roll-out {
+  animation: rollOut 1s;
+}
+
+.move-in {
+  animation: bounceInUp 1s;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@-webkit-keyframes sideWays {
+    0%    { bottom: -300px; }
+    100%  { bottom: -50px; }
+}
+
+@keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    bottom: -300px;
+  }
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  animation-name: bounceInUp;
+}

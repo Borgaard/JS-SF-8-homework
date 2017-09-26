@@ -18,8 +18,7 @@ let beerMax = beerTotal;
 function bottlePluralTest(number){
 	if (number === 1){
 		return "bottle";
-	}
-	else {
+	} else {
 		return "bottles";
 	}
 };
@@ -43,14 +42,14 @@ $('#beerMe').click( function(){
 	if ( beerTotal > 0){
 		$( "#beerTotal" ).empty().append(beerTotal + " " + bottlePluralTest(beerTotal) + " of beer on the wall, " + beerTotal + " " + bottlePluralTest(beerTotal) +
 		 " of beer." + "</br>"+"Take one down and pass it around, " + (beerTotal-1) + " " + bottlePluralTest(beerTotal-1) + " of beer on the wall.");
+		$(".beer").css("height", ((beerTotal/beerMax)*100)+"%");
 		beerTotal--;
-		$(".beer").css("height", (((beerTotal+1)/beerMax)*100)+"%");
 	}
 	else{
 		$(".beer").css("height", "0%");
 		$( "#beerTotal" ).empty().append("No more bottles of beer on the wall, no more bottles of beer.</br> Go to the store and buy some more, " + beerMax + " bottles of beer on the wall.");
-		if ( beerTotal === 0) { beerTotal = beerMax}
-		}
+		if ( beerTotal === 0) { beerTotal = beerMax }
+	}
 });
 
 
