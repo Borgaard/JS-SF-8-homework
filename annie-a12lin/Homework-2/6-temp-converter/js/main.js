@@ -55,11 +55,12 @@ BONUS 3: Clear the contents of the text box after you've displayed your results,
 */
 
 
-let temp = document.querySelector("#temperature").value;
+
 
 document.getElementById("fahrenheit_to_celsius").addEventListener("click", fToC);
 
 function fToC() {
+    let temp = document.querySelector("#temperature").value;
     let answer = 1.8 * temp + 32;
     document.getElementById("result").innerHTML = answer;
     document.getElementById("temperature").value = " ";
@@ -68,6 +69,7 @@ function fToC() {
 document.getElementById("celsius_to_fahrenheit").addEventListener("click", cToF);
 
 function cToF() {
+    let temp = document.querySelector("#temperature").value;
     let answer = (temp - 32) / 1.8;
     document.getElementById("result").innerHTML = answer;
     document.getElementById("temperature").value = " ";
