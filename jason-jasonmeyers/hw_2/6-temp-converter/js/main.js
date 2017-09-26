@@ -33,23 +33,19 @@ CToF.addEventListener('click', function() {
 });
 
 function convert(type) {
-
-  console.log(type)
-  if (type = 'Fahrenheit') {
-    var temperature = document.getElementById('temperature');
-    var result = document.getElementById('result');
-
+  var temperature = document.getElementById('temperature');
+  var result = document.getElementById('result');
+  if (type === 'Fahrenheit') {
     if (temperature.value !== '') {
       let C = ((temperature.value - FFFFF) / CONVERSION);
       result.innerHTML = Math.floor(C);
       temperature.value = "";
     }
   } else
-    if (type = 'Celsius') {
-    var temperature = document.getElementById('temperature');
-    var result = document.getElementById('result');
+  if (type === 'Celsius') {
     if (temperature.value !== '') {
-      let F = ((CONVERSION * temperature.value) + FFFFF)
+      // F = 1.8 * C + 32
+      let F = (CONVERSION * temperature.value + FFFFF);
       result.innerHTML = Math.floor(F);
       temperature.value = "";
     }
