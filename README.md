@@ -42,4 +42,5 @@ If any files are in the pull request outside of your personal folder, we will se
 
  \#       | Assignment | Class Topic | Due Date
  :------: | :--------- | :---------- | :-------
- | 0      | `99-bottles-of-beer` | 02-data-types | Monday, September 18th
+ | 1      | `99-bottles-of-beer` | 02-data-types      | Monday, September 18th
+ | 2      | `fizzBuzz`, `temperatureConverter`, read about Hubot | 04-functions-scope | Monday, September 25th
