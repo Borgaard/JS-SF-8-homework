@@ -20,6 +20,16 @@
   // - park
 
 // Answer Starts Here
+// 'Calendar'
+// Description: browser-based Calendar program.
+// Every 'Calendar' has
+// - an owner
+// - a profile setting
+// - a email address
+// Every 'Calendar' can
+// - create event
+// - delete event
+// - invite other calendars
 
 // Answer Ends Here
 
@@ -35,7 +45,10 @@
 var pet_owner;
 
 // Answer Starts Here
-
+pet_owner = {
+  name: 'Ann',
+  address: '123 Main Street'
+}
 // Answer Ends Here
 
 
@@ -54,11 +67,19 @@ var pet_owner;
 var some_pet;
 
 // Answer Starts Here
-
+var some_pet = {
+  name: 'Mocha',
+  species: 'dog',
+  breed: 'poodle',
+  noise: 'woof',
+  make_noise: function() {
+    console.log(some_pet.noise);
+  }
+}
 // Answer Ends Here
 
 /////////////////////////////////////////////////////////////
 
-// You're done! 
+// You're done!
 
 /////////////////////////////////////////////////////////////
