@@ -30,8 +30,9 @@ function saveFavorites(){
   console.log(tracker, favorites)
 }
 
+
 function printFavorites() {
-  favorites.innerHTML = "";
+  favoritesDiv.innerHTML = "";
   var favs = favorites.map(function(e) {
     var p = document.createElement('p');
     var doodle = document.createTextNode(e);
