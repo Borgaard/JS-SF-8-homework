@@ -2,7 +2,8 @@ let die = [];
 let app = document.getElementById('app');
 
 function returnRandomNumber(){
-  let num = Math.ceil(9 * Math.random());
+  let num = Math.ceil(6 * Math.random());
+  console.log(num);
   return(num);
 }
 
