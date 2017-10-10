@@ -1,5 +1,12 @@
 let die = [];
 let app = document.getElementById('app');
+let rollDice = document.getElementById('rolldice');
+
+rollDice.addEventListener('click', function(){
+  app.innerHTML = '';
+  returnTwo();
+  die = [];
+})
 
 function returnRandomNumber(){
   let num = Math.ceil(6 * Math.random());
@@ -19,8 +26,6 @@ function appDraw(array){
 function returnTwo(){
   die.push(returnRandomNumber());
   die.push(returnRandomNumber());
-  console.log(die);
+  // console.log(die);
   appDraw(die);
 }
-
-returnTwo();
