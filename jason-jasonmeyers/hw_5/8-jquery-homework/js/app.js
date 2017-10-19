@@ -52,7 +52,7 @@ $bigCont.append($li);
 
 
 
-
+// Vanilla JavaScript works -->
 // let submitButton = document.querySelector('#addQuestion');
 // submitButton.addEventListener('click', function(e){
 //   e.preventDefault();

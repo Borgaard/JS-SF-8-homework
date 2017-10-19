@@ -35,10 +35,10 @@ var weatherUrl = "http://api.openweathermap.org/data/2.5/";
 var queryType = "weather?";
 var weatherLocation = "q=" + getLocationData;
 var apiIdent = "&appid=";
-var apiKey = "";
+var apiKey = "02c537feb8ec33139ffffbe75928b8b2";
 
 var composedUrl = weatherUrl + queryType + weatherLocation + apiIdent + apiKey;
 
-$.get( composedUrl, function( data ) {
+$.get(composedUrl, function(data) {
   getTemp.innerHTML = returnF(data.main.temp);
 });
