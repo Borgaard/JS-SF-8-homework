@@ -18,21 +18,23 @@ Make sure the new questions you add to the survey use the same class names as in
 
 $('#addQuestion').on('click', function(event) {
     event.preventDefault();
-    let userQuestion = $('#question').val(); // get user text from text box
+    let userQuestion = $('#question').val();
     console.log(userQuestion);
     let $label = $('<label>').text(userQuestion);
     let $input = $('<input>').attr('type', 'text')
                             .addClass('form-control');
     let $li = $('<li>').addClass('form-group padout');
+    var $removeButton = $('<button>').html("Remove question");
     $li.append($label);
     $li.append($input);
-    $('#surveyList').append($li); // page refresh is making the new item disappear? 
+    $li.append($removeButton);
+    $('#surveyList').append($li);
+    $('#question').val('');
 });
 
-// When remove button is clicked, navigate up to parent element and delete it. Remove should have event delegation.
 $('#surveyList').on('click', 'button', function(event) {
     event.preventDefault();
-    $(this).parent('li').remove(); //trying to navigate to the parent element ('li') and remove
+    $(this).parent('li').remove();
 });
 
 $("#surveyList li").each(function(event) {

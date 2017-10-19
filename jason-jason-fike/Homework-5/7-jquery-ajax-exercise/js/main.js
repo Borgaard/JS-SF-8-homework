@@ -46,7 +46,7 @@ $.get(weatherUnlockedUrl, function(data2) {
 })
 */
 
-// Refactored - better solution was to have a function for DOM manipulation and then call that within the .get methods
+/* Refactored - better solution was to have a function for DOM manipulation and then call that within the .get methods
 
 let openWeather = $.get(weatherUrl, function(data1) {
     console.log(data1);
@@ -67,3 +67,27 @@ console.log(degFInt);
 $('#temp').text(degFInt);
 
 $('#temp2').text(weatherUnlocked.responseJSON.temp_f);
+
+*/
+
+// Attempt 2
+
+function kelvinToF(initialTemp) {
+    //let degF = (initialTemp - 273.15) * 1.8 + 32;
+    // let degFInt = Math.floor(degF);
+    // return degFInt;
+    return Math.floor((initialTemp - 273.15) * 1.8 + 32);
+}
+
+function addToDOM(location, tempF) {
+    $(location).text(tempF);
+}
+
+$.get(weatherUrl, function(data1) {
+    let tempF = kelvinToF(data1.main.temp);
+    addToDOM('#temp', tempF);
+});
+
+$.get(weatherUnlockedUrl, function(data2) {
+    addToDOM('#temp2', data2);
+});
