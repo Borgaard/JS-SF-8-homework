@@ -18,32 +18,36 @@ BONUS 3: Clear the contents of the text box after you've displayed your results,
 */
 
 
+// let fc = function(temperature) {
+//     let temperature = document.querySelector('#temperature').value;
+//     console.log(temperature);
+//     let celsius = (temperature - 32) / 1.8;
+//     console.log(celsius);
+//     console.log(temperature)
+// }
 
 
+var button1 = document.getElementById('fahrenheit_to_celsius');
+button1.addEventListener("click", function(){
 
-let fc = function(temperature) {
-    let temperature = document.querySelector('#temperature').value;
-    console.log(temperature);
-    let celsius = (temperature - 32) / 1.8;
-    console.log(celsius);
-}
+        let fc = function(temperature) {
+            let celsius = (temperature - 32) / 1.8;
+            console.log(celsius);
+    }
+    var temperature = document.getElementById('temperature').value;
+    fc(temperature);
+});
 
-
-let button1 = document.getElementById('fahrenheit_to_celsius');
-button1.addEventListener("click", fc(temperature));
-
-
-
-let cf = function(temperature) {
-    let fahrenheit = (1.8 * temperature) + 32;
-    console.log(fahrenheit);
-}
-
-
-
-
-
-
+var button2 = document.getElementById('celsius_to_fahrenheit');
+button2.addEventListener("click", function(){
+    
+    let cf = function(temperature) {
+        let fahrenheit = (1.8 * temperature) + 32;
+        console.log(fahrenheit);
+    }
+    var temperature = document.getElementById('temperature').value;
+    cf(temperature);
+});
 
 
 
