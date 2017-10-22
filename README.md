@@ -35,11 +35,16 @@ Example of how your local homework directory should be structured:
 
 Weekly Homework
 ---------------
-Homework will be assigned on Wednesdays, due the following Monday.     
+Homework will be [assigned on Wednesdays](https://svodnik.github.io/jsd8/pages/homework.html), due the following Monday.     
 If any files are in the pull request outside of your personal folder, we will send it back to you to fix!
 
 **Submit homework by pushing to your jsd8-homework repo, then submit a pull request**
 
  \#       | Assignment | Class Topic | Due Date
  :------: | :--------- | :---------- | :-------
- | 0      | -          | -           | -
+  1      | `99-bottles-of-beer` | 02-data-types      | Monday, September 18th
+  2      | `fizzBuzz`, `temperatureConverter`, read about Hubot | 04-functions-scope | Monday, September 25th
+  3      | `json` | 06-intro-to-DOM | Monday, October 2nd 
+  4      | `madlibs` | 08-intro-to-jQuery | Monday, October 9th 
+  5      | `jquery-ajax` | 10-ajax-api | Monday, October 16th 
+  6      | `500px` | 12-advanced-apis | Monday, October 23rd

@@ -1,0 +1,30 @@
+h2 {
+	color: #4A4A4A;
+	font-size: 28px;
+	margin: auto;
+	padding-bottom: 20px;
+}
+
+body {
+	margin: 0 auto;
+	padding: 40px 0px 0px 5%;
+}
+
+li {
+	color: #666;
+	font-size: 28px;
+	line-height: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #4A90E2;
+}
+
+.group {
+	background-color: rgba(250,250,250,1);
+	padding: 20px 20px 20px 20px;
+	border: 1px solid rgba(230,230,230,1);
+	margin: 40px 0px;
+	width: 90%;
+}
