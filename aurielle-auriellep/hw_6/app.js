@@ -1,6 +1,6 @@
 $(function() {
     _500px.init({
-        sdk_key: YOUR_SDK_KEY,
+        sdk_key: YOUR_API_KEY,
     });
 
     $('#login').on('click', function() {
@@ -22,7 +22,8 @@ $(function() {
                 let searchOptions = {
                     geo: `${lat},${long},${radius}`,
                     only: 'Landscapes',
-
+                    rpp: 28,
+                    sort: 'highest_rating',
                 };
                 _500px.api('/photos/search', searchOptions, function(response) {
                     const photoArray = response.data.photos;
