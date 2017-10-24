@@ -48,3 +48,4 @@ If any files are in the pull request outside of your personal folder, we will se
   4      | `madlibs` | 08-intro-to-jQuery | Monday, October 9th 
   5      | `jquery-ajax` | 10-ajax-api | Monday, October 16th 
   6      | `500px` | 12-advanced-apis | Monday, October 23rd
+  7      | `Feedr` project | 13-feedr-lab | Monday, October 30th 
