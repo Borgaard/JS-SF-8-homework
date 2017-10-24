@@ -25,11 +25,11 @@ BONUS: Implement a form that prompts users for a city and state and returns data
 
 let $city = "";
 let $state = "";
-var apiKey = "7ed5fbcc72d7cb2c417e2e03c6eeb4d1";
+var apiKey = "";
 
 
-var appId = "1ae91a26";
-var apiKey2 = "659c0ebd745790f25e549c9a82455180"
+var appId = "";
+var apiKey2 = ""
 var weatherUrl2 = "http://api.weatherunlocked.com/api/current/us.94114?app_id="+appId+"&app_key="+apiKey2;
 
 $('#getTemp').on('click', function(event){
