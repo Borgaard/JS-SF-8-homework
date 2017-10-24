@@ -16,7 +16,6 @@ $(function() {
         let radius = '25mi';
 
         let searchOptions = {
-          exclude_nude: 0,
           geo: lat + ',' + long + ',' + radius, // set geo query
           only: 'Landscapes', // only return landscapes
           image_size: 3,
@@ -29,6 +28,8 @@ $(function() {
           if (response.data.photos.length === 0) {
             console.log('No photos found!');
           } else {
+            console.log('waiting...')
+            $('.images').text('thinking...');
             handleResponseSuccess(response);
           }
         });
@@ -42,9 +43,7 @@ $(function() {
     let allData = response.data.photos;
     let data = response.data;
     console.log(data);
-
     $.each(allData, function() {
-
       let contDiv = $('<div>');
       let text = $('<div>').append(this.name).attr('class', 'title');
       let element = $('<img>').attr('src', this.image_url).attr('alt', text).addClass('image');
@@ -62,5 +61,5 @@ $(function() {
 
   $('.images').on('mouseover', function(e){
     console.log(e)
-  })
+  });
 });
