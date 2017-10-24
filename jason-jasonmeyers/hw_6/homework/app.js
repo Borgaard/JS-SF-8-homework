@@ -13,7 +13,7 @@ $(function() {
       navigator.geolocation.getCurrentPosition(function(position) {
         let lat = position.coords.latitude;
         let long = position.coords.longitude;
-        let radius = '2000mi';
+        let radius = '25mi';
 
         let searchOptions = {
           exclude_nude: 0,
