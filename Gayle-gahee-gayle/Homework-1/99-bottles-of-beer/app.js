@@ -29,3 +29,19 @@ console.log ("No more bottles of beer on the wall, no more bottles of beer."+ "\
 
 // for (i=99;i>=1;i--)
 //   console.log(i + " bottles of beer on the wall, " + i + " bottles of beer. Take one down and pass it around, " + (i-1) + " bottles of beer on the wall." + "</br>");
+
+let heading = document.createElement('h1')
+let songLine = document.createElement('li');
+
+let headingText = document.createTextNode("99 Bottles of Beer on the Wall");
+let lyrics = document.createTextNode (beerCount + " " + bottles +" of beer on the wall, " + beerCount + " " + bottles  + " of beer." + "\n" + " "
++ "Take one down and pass it around," + " " + (beerCount-1) + " " + bottles + " of beer on the wall." );
+
+let body = document.querySelector('body');
+
+heading.appendChild(headingText);
+songLine.appendChild(lyrics);
+
+
+body.appendChild(heading);
+body. appendChild(songLine);
