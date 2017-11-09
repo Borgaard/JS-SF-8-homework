@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Temperature Converter</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+			<section class="converter-container">
+
+
+			  	<h1>Temperature Converter</h1>
+
+			    <input type="text" id="temperature" placeholder="Enter a value"/>
+			    <button id="fahrenheit_to_celsius" type="button">F to C</button>
+			    <button id="celsius_to_fahrenheit" type="button">C to F</button>
+
+				<p id="result">Try a few extreme ones</p>
+
+			</section>
+			<div class="sun"></div>
+			<div class="canvas-wrap">
+  				<canvas id="canvas"></canvas>
+			</div>
+
+			<div><img class="cactus" src="img/cactus.png"></div>
+			<div><img class="beach-chair" src="img/beach-chair.png"></div>
+
+			<div class="clouds">
+				<marquee behavior="scroll" direction="right" scrollamount="4" width="100%" class="cloud cloud1"><img src="img/cloud.png"></marquee>
+				<marquee behavior="scroll" direction="right" scrollamount="3.5" width="100%" class="cloud cloud2"><img src="img/cloud.png"></marquee>
+				<marquee behavior="scroll" direction="right" scrollamount="5" width="100%" class="cloud cloud3"><img src="img/cloud.png"></marquee>
+				<marquee behavior="scroll" direction="right" scrollamount="6.5" width="100%" class="cloud cloud4"><img src="img/cloud.png"></marquee>
+			</div>
+		<div class="beach"></div>
+		<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,316 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+  font-family: 'Lato', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+	margin: auto;
+  background: #A3CDFF;
+  height: 1500px;
+  width: auto;
+  background-size: 100%;
+  background: -webkit-linear-gradient(#CAE1FF , #A3CDFF); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#CAE1FF , #A3CDFF); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#CAE1FF , #A3CDFF); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#CAE1FF , #A3CDFF); /* Standard syntax */
+}
+
+#content span {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/*.parent {
+  position: relative;
+}*/
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.underCenter {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.underCenter {
+  /*top: 48%;*/
+  text-align: center;
+}
+
+.addMessage {
+  top: 30%;
+  display: block;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+  opacity: .5;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  font-size: 120px;
+  z-index: 1000;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #B7B1B3;
+  font-weight: 300;
+}
+
+.green {
+  color: #7ED321;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #DDD6D8;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 5000;
+}
+
+/* removing the outline around selected buttons*/
+button:focus { outline:0 !important; }
+
+button:active {
+  background-color: #4A90E2;
+}
+
+button:hover {
+  background-color: #4A90E2;
+  color: white;
+}
+
+.flipped {
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+.bee {
+  clear: both;
+  position: absolute;
+}
+
+.pauseMusic {
+  position:absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+/******************************************
+/* The BUZZ IN FIZZBUZZ
+/*******************************************/
+
+
+.buzz {
+  animation: buzzing 0.82s;
+}
+
+@keyframes buzzing {
+  10% {
+    -webkit-transform: translateX(6px) rotate(4deg);
+    transform: translateX(6px) rotate(4deg);
+  }
+  20% {
+    -webkit-transform: translateX(-6px) rotate(-4deg);
+    transform: translateX(-6px) rotate(-4deg);
+  }
+  30% {
+    -webkit-transform: translateX(6px) rotate(4deg);
+    transform: translateX(6px) rotate(4deg);
+  }
+  40% {
+    -webkit-transform: translateX(-6px) rotate(-4deg);
+    transform: translateX(-6px) rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: translateX(4px) rotate(2deg);
+    transform: translateX(4px) rotate(2deg);
+  }
+  60% {
+    -webkit-transform: translateX(-4px) rotate(-2deg);
+    transform: translateX(-4px) rotate(-2deg);
+  }
+  70% {
+    -webkit-transform: translateX(4px) rotate(2deg);
+    transform: translateX(4px) rotate(2deg);
+  }
+  80% {
+    -webkit-transform: translateX(-4px) rotate(-2deg);
+    transform: translateX(-4px) rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: translateX(2px) rotate(0);
+    transform: translateX(2px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-2px) rotate(0);
+    transform: translateX(-2px) rotate(0);
+  }
+}
+
+.fizz {
+  animation: verticalWobble 0.82s;
+}
+
+@keyframes verticalWobble {
+  16.65% {
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  49.95% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  83.25% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fizzbuzz {
+  animation: upRightWobble 0.82s;
+}
+
+@keyframes upRightWobble {
+
+  16.65% {
+    -webkit-transform: translate(16px, -16px);
+    transform: translate(16px, -16px);
+  }
+  33.3% {
+    -webkit-transform: translate(-12px, 12px);
+    transform: translate(-12px, 12px);
+  }
+  49.95% {
+    -webkit-transform: translate(8px, -8px);
+    transform: translate(8px, -8px);
+  }
+  66.6% {
+    -webkit-transform: translate(-4px, 4px);
+    transform: translate(-4px, 4px);
+  }
+  83.25% {
+    -webkit-transform: translate(2px, -2px);
+    transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+
+/*******************************************/
+/* Fizz Bubbles
+/*******************************************/
+
+#background { height: 100% }
+body {
+  overflow: hidden;
+}
+#background { padding: 100px 0 }
+.bubble {
+  width: 100px;
+  height: 100px;
+/*  border: 1px solid #4A90E2;*/
+  border-radius: 100px;
+  position: absolute;
+  background: #fff;
+}
+
+@-webkit-keyframes moveclouds {
+    0%    { top: 100%; }
+    100%  { top: 0%; }
+}
+
+@-webkit-keyframes sideWays {
+    0%    { margin-left:0px; }
+    100%  { margin-left:100px; }
+}
+
+
